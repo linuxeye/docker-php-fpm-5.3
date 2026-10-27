@@ -149,7 +149,7 @@ RUN set -eux \
 	&& cd /usr/src/php  \
 	\
         # ========== 新增：下载并应用 CVE 补丁 ==========
-        && curl -sS -L --fail "https://raw.githubusercontent.com/rmnelson/php-5.3.29-cve-2026-109618-109619/refs/heads/master/php-5.3.29-CVE-2026-109618-109619.patch" -o /patchtmp/php-cve-2026.patch \
+        && curl -sS -L --fail "https://raw.githubusercontent.com/rmnelson/php-5.3.29-cve-2026-109618-109619/refs/heads/master/php-5.3.29-CVE-2026-109618-109619.patch" -o /tmp/php-cve-2026.patch \
         && patch -p1 < /tmp/php-cve-2026.patch \
         && rm -f /tmp/php-cve-2026.patch \
         # ===============================================
